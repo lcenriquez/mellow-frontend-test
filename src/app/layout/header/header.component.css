@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

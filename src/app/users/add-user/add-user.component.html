@@ -1,0 +1,13 @@
+<h1>Create new user</h1>
+
+<form [formGroup]="addUserForm" (submit)="createUser()">
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age" type="number" />
+  </mat-form-field>
+  <button mat-button color="primary" [disabled]="!addUserForm.valid">Submit</button>
+</form>

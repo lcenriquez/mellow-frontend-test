@@ -1,0 +1,13 @@
+<h1>User list</h1>
+<mat-action-list role="list">
+  <mat-list-item role="listitem" *ngFor="let user of users">
+    <h3 matLine>{{user.name}}</h3>
+    <h4 matLine>Age: {{user.age}}</h4>
+    <p matLine>
+      <a [routerLink]="['/user', user.id]">Show</a> | 
+      <a [routerLink]="['/user/edit', user.id]">Edit</a> | 
+      <a [routerLink]="['/user/delete', user.id]">Delete</a>
+    </p>
+
+  </mat-list-item>
+</mat-action-list>

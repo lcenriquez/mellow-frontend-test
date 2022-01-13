@@ -1,0 +1,13 @@
+<h1>Edit user <span *ngIf="user">#{{user.id}}</span></h1>
+
+<form [formGroup]="editUserForm" (submit)="updateUser()" *ngIf="user">
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age" />
+  </mat-form-field>
+  <button mat-button color="primary">Submit</button>
+</form>
